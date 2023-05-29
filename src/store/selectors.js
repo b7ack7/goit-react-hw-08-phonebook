@@ -10,5 +10,5 @@ export const selectFilter = state => state.filter.filter;
 export const selectVisibleContacts = state => {
     const contacts = selectContacts(state);
     const filter = selectFilter(state);
-    return contacts.filter(contact =>  contact.name.toLocaleLowerCase().includes(filter));
+    return contacts.filter(contact =>  contact.name.includes(filter));
 };
